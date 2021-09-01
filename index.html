@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheCookTailDB</title>
+    <!-- bootstrap css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <!-- inter nal css -->
+    <style>
+        .main_div{
+            width: 100vw;
+            min-height: 100vh;
+            background: rgb(17, 15, 15);
+        }
+    </style>
+    
+</head>
+<body> 
+
+    <main class="container-fluid py-5 main_div">
+        <!-- search section  -->
+        <section class="container">
+           <div class="row">
+               <hr class="border border-light bg-light">
+                <div class="col-10 col-md-7 mx-auto text-center">
+                    <div class="d-flex pt-2 pb-4">
+                        <input class="form-control" type="text" id="inputData" placeholder="Search your TheCookTailDB">
+                        <button id="clickBtn" class="btn btn-danger">Search</button>
+                    </div>
+                    <div class="d-flex text-center justify-content-between text-light">
+                        <p class="fw-bold">
+                            <i class="fab text-danger fa-gulp"></i> 
+                            Total Drinks: <h5 class="fw-light">627</h5>
+                        </p>
+                        <p class="fw-bold">
+                            <i class="fas text-danger fa-pizza-slice"></i> 
+                            Total Ingredients: <h5 class="fw-light">488</h5>
+                        </p>
+                        <p class="fw-bold">
+                            <i class="fas text-danger fa-wine-bottle"></i> 
+                            Drink Images: <h5 class="fw-light">627(90cc)</h5>
+                        </p>
+                    </div>
+                </div>
+                <hr class="border border-light bg-light">
+           </div>
+        </section>
+        <!-- single data section  -->
+        <section class="container">
+            <div id="showSingle" class="card mx-auto mb-3 col-10 col-md-8 text-light bg-dark">
+                <div class="row g-0">
+                  
+                </div>
+              </div>
+        </section>
+        <!-- multiData show section  -->
+        <section class="container">
+            <div id="ShowMultiData" class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- <div  class="col">
+                </div> -->
+              </div>
+        </section>
+        <!-- pagination section  -->
+        <section class="container">
+            <div class="row mt-5">
+                <hr class="border border-light bg-light">
+                <h5 class="text-center text-light fw-bold mt-2 mb-3">Browse By Name <span class="text-danger">TheCocktailDB</span></h5>
+                <div class="col-10 col-md-12 mx-auto d-flex justify-content-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination d-flex flex-row flex-wrap">
+                          <li class="page-item">
+                            <p class="page-link text-dark" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </p>
+                          </li>
+                          <li class="page-item"><span class="page-link bg-dark text-light " onclick="ClickA()">A</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickB()">B</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickC()">C</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickD()">D</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickE()">E</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickF()">F</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickG()">G</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickH()">H</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickI()">I</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickJ()">J</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickK()">K</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickL()">L</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickM()">M</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickN()">N</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickO()">O</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickP()">P</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickQ()">Q</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickR()">R</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickS()">S</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickT()">T</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickU()">U</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickV()">V</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickW()">W</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickX()">X</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickY()">Y</span></li>
+                          <li class="page-item"><span class="page-link text-light bg-dark" onclick="ClickZ()">Z</span></li>
+                          <li class="page-item">
+                            <p class="page-link text-dark" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </p>
+                          </li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+        </section>
+    </main> 
+    
+    
+    <!-- js link and bootstrap js link  -->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body> 
+<!-- </html> 
